@@ -29,7 +29,7 @@ var earlyDate = $("#startYear").val() + "0101";
 var endDate = $("#end-year").val() + "1231";
 // //query url is the combination of these fields plus the api search and API key
 var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?" + search + "&fq="
-    + filter + "&begin_date=" + earlyDate + "&end_date=" + endDate +
+    + filter + ( (earlyDate.length == 8) ? "&begin_date="+earlyDate : "") + ( (endDate.length == 8) ? "&end_date="+endDate : "") +
     "&api-key=" + apiKey;
 
     //now time to call an ajax function
