@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New York Times Search</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../js/displayHandler.js"></script>
+    <script src="../js/requestHandler.js"></script>
+</head>
+<header>
+    <div class="header-wrap">
+        <h1>New York Times Search</h1>
+    </div>
+</header>
+    <div class="search-params">
+        <h2>Search Parameters</h2>
+        <div class="search-wrap">
+            <h3>Search Term:</h3>
+            <input id="term" type="text">
+            <h3>Number of Records to Retrieve:</h3>
+            <select id="records">
+                    <option value="1">1</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                  </select>
+            <h3>Start Year (Optional):</h3>
+            <input id="start-year" type="text">
+            <h3>End Year (Optional):</h3>
+            <input id="end-year" type="text">
+        </div>
+        <button id="search">Search</button>
+        <button id="clear-results">Clear Results</button>
+    </div>
+    <div class="top-articles">
+        <h2>Top Articles</h2>
+
+    </div>
+<body>
+    
+</body>
+</html>
