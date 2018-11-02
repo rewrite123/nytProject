@@ -1,4 +1,4 @@
-function getRequest() {
+
 
 //apiKey location
 var apiKey = "d92e54e488034f8c917c32b1c09096b6"
@@ -15,7 +15,8 @@ var earlyDate = $("#earlyDate").val() + "0101";
 //ending date is similar but a later date
 var endDate = $("#endDate").val() + "1231";
 
-$("#searchButton").on("click", function() {
+$("#search").on("click", function() {
+  console.log("click works");
 //query url is the combination of these fields plus the api search and API key
 var queryURL = "https://api.nytimes.com/svc/search/v2/?q=" + search + "&fq="
     + filter + "&begin_date=" + earlyDate + "&end_date=" + endDate +
@@ -28,9 +29,10 @@ var queryURL = "https://api.nytimes.com/svc/search/v2/?q=" + search + "&fq="
       })
         // After data comes back from the request
         .then(function(response) {
-            
+            // $("#article-holder").append(response);
+            console.log(response);
         
 });
 })
 
-}
+
