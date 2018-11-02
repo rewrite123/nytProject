@@ -1,3 +1,5 @@
+
+var requests = [];
 var articles = [];
 
 var ArticleNYT = function(){
@@ -42,5 +44,14 @@ var ArticleNYT = function(){
 	this.getProduct = function(){
 		return this.container;
 	}
-	
+}
+
+function addArticles(){
+	articles = [];
+	for(let i in requests){
+		articles.push(new ArticleNYT());
+	}
+	for(let i = articles.length-1; i >= 0; i--){
+		document.getElementById("article-holder").append(articles[i]);
+	}
 }

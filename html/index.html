@@ -21,14 +21,17 @@
             <input id="term" type="text">
             <h3>Number of Records to Retrieve:</h3>
             <select id="records">
-                    <option value="1">1</option>
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                  </select>
+                <option value="1">1</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+            </select>
             <h3>Start Year (Optional):</h3>
-            <input id="start-year" type="text">
+            <input  type="number" min="1900" max="2099" step="1" value="" />
             <h3>End Year (Optional):</h3>
-            <input id="end-year" type="text">
+            <input id="end-year" type="number" min="1900" max="2099" step="1" value="" />
+			
+			<button id="searchButton">Search:</button>
+			
         </div>
         <button id="search">Search</button>
         <button id="clear-results">Clear Results</button>
