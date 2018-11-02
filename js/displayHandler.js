@@ -29,6 +29,7 @@ var ArticleNYT = function(){
 	this.articleDate.textContent = args[3] || (new Date()).getDate();
 	this.articleSource = document.createElement("a");
 	this.articleSource.classList.add("articleTitle");
+	this.articleSource.textContent = "You can find the article here!";
 	this.articleSource.href = args[4] || "#";
 	
 	this.textContainer.appendChild(articleTitle);
